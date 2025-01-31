@@ -68,10 +68,10 @@ async def start_cmd(bot, message):
     await message.reply_photo(photo=Rkn_Bots.RKN_PIC,
         caption=f"<b>Hey, {message.from_user.mention}\n\nI'm an auto-caption bot. I automatically edit captions for videos, audio files, and documents posted on channels.\n\nuse <code>/set_caption</code> to set caption\nUse<code>/delcaption</code> To delete caption and set caption to default.\n\nNote:All commands works on channels only</b>",
         reply_markup=types.InlineKeyboardMarkup([[
-            types.InlineKeyboardButton('Main Channel', url='https://t.me/RknDeveloper'),
-            types.InlineKeyboardButton('Help Group', url='https://t.me/Rkn_Bots_Support')
+            types.InlineKeyboardButton('📢 Main Channel', url='https://t.me/RM_Movie_Flix'),
+            types.InlineKeyboardButton('♻️ Mirror Leech', url='https://t.me/mltbrm')
             ],[
-            types.InlineKeyboardButton('🔥 Source Code 🔥', url='https://github.com/RknDeveloper/Rkn-AutoCaptionBot')
+            types.InlineKeyboardButton('🍃 Developer', url='https://t.me/RahatMx')
     ]]))
     
 
@@ -110,7 +110,7 @@ async def delCaption(_, msg):
 
 # Extract Language 
 def extract_language(file_name):
-    language_pattern = r'\b(Hindi|English|Tamil|Bhojpuri|Nepali|Punjabi|Telugu|Malayalam|Kannada|Hin)\b'
+    language_pattern = r'\b(Hindi|bangla|bengali|English|Tamil|Bhojpuri|Nepali|Punjabi|Telugu|Malayalam|Kannada|Hin)\b'
     languages = set(re.findall(language_pattern, file_name, re.IGNORECASE))
     if not languages:
         return "Unknown"
